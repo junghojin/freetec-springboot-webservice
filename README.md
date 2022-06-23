@@ -1,11 +1,13 @@
 
-# 스프링 부트와 AWS로 혼자 구현하는 웹 서비스 
+# 스프링 부트와 AWS로 혼자 구현하는 웹 서비스
 
 ## 22.06.23. 목 - 01. 인텔리제이로 스프링 부트 시작하기
 - build.gradle에 수동으로 repositories, dependencies 설정
-- gradle 에러 : 
+- gradle 에러 :
   - /gradle/wrapper/gradle-wrapper.properties 에서 버전 변경
+  ```script 
   distributionUrl=https\://services.gradle.org/distributions/gradle-4.10.2-bin.zip
+  ```
 - Git upload
   - command + shift + A : share project on github 입력하여 선택
   - 깃 저장소 생성 : 로그인, directory 명, description 등 작성
