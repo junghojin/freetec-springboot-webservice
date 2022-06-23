@@ -1,0 +1,52 @@
+buildscript {
+    /*
+     * ext: 전역변수를 설정하겠다.
+     * 'springBootVersion' 이라는 전역변수의 값은 '2.1.7 RELEASE' 이다.
+     *  */
+    ext {
+        springBootVersion = '2.1.7.RELEASE'
+    }
+
+    repositories {
+        mavenCentral()
+        /*
+        * jcenter(): 라이브러리 업로드 때문에 사용한다.
+        * mavenCenteral에 올린 라이브러리의 버전 업로드가 필요할 때, jcenter()이 필요하다.
+        * 2022년 1월부터 결함 해결을 위해 더이상 사용할 수 없다.
+        * jcenter()을 maven으로 마이그레이션 해야한다.
+        * */
+//        jcenter()
+    }
+
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group 'com.jojoldu.book'
+version '1.0-SNAPSHOT'
+
+// 각종 의존성 라이브러리들을 어떤 원격 저장소에서 받을 것인지를 정한다.
+repositories {
+    mavenCentral()
+//    jcenter() // 라이브러리 업로드 난이도 때문에 jcenter는 deprecated
+}
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-web')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+
+test {
+    useJUnitPlatform()
+}
+
+/* 왜 buildscript에서의 repositories, dependencies와 all projects 섹션의 repositories와 dependencies의 차이는?
+buildscipt는 Gradle 자체를 위한 수행방법
+all projects는 Gradle에서 빌드하는 모듈을 위한 것
+ */
