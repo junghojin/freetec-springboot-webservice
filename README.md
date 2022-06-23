@@ -1,5 +1,12 @@
 
 # 스프링 부트와 AWS로 혼자 구현하는 웹 서비스
+> 출판사: 프리렉 / 이동욱 지음
+> 22.06.23 ~ 22.07.06 학습
+> 공부를 하다 궁금한 점이나 정리할 내용을 블로그에 정리하였습니다.
+> [의문사항 기록](https://edlin.tistory.com)
+## 블로그 정리 내용
+1. Gradle vs. Maven [내용](https://edlin.tistory.com/entry/Gradle-vs-Maven)
+2. SpringBoot - build.gradle 의 이해 [내용](https://edlin.tistory.com/entry/buildgradle의이해?category=934238)
 
 ## 22.06.23. 목 - 01. 인텔리제이로 스프링 부트 시작하기
 - build.gradle에 수동으로 repositories, dependencies 설정
