@@ -14,7 +14,9 @@
     - .idea 디렉토리는 커밋하지 않는다
     - 왜? 프로젝트 실행시 자동으로 생성되는 파일
       - .gitignore 자동 생성 - 자동생성되지 않을 경우 plugins 설치 필요 (인텔리제이 다시 시작 필요)
-        - .gradle
-        - .idea
+      ```script
+      .gradle
+      .idea
+      ```
   - command + K : 커밋할 파일 설정 및 커밋메시지 작성
   - command + shift + K : 푸쉬
